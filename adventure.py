@@ -25,12 +25,12 @@ def living_room():
     else:
         living_room()
 	
-def leave_living_room():	
+def leave_living_room():	#condition created to deal with issue of having more text appear after 'skeleton encounter'
     living_room_direction = input("where next?\n[1] Leave?\n[2] Kitchen?\n")
     living_room_direction = int(living_room_direction)
     if living_room_direction == 1:
         print("Probably sensible, you leave the house")
-        if "Scary Dagger" in inventory:
+        if "Scary Dagger" in inventory: #test condition for checking whether the Scary Dagger is in the inventory. 
             print("You also get a scary dagger")
     elif living_room_direction == 2:
         kitchen()	
